@@ -1,0 +1,23 @@
+<div class="wrap" id="instant-articles-configuration">
+  <h1>Social Article Generator</h1>
+
+  <form method="post" action="/social-article/generate">
+    <table class="form-table">
+      <tbody>
+		<tr>
+		  <th scope="row">
+			<label for="subreddit" type="text">Subreddit</label>
+		  </th>
+		  <td>
+			<input name="subreddit" type="text" class="regular-text"/>
+			<p class="description">Enter the slug of the subreddit you'd like to import. "cats", "CrappyDesign" etc.</p>
+		  </td>
+		</tr>
+      </tbody>
+    </table>
+    <p class="submit">
+      <input type="submit" name="submit" id="submit" class="button button-primary" value="Begin Import">
+      <span class="acf-spinner"></span>
+    </p>
+  </form>
+</div>
