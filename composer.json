@@ -1,9 +1,10 @@
 {
-  "name": "getherbert/herbert-plugin",
-  "description": "Herbert plugin",
+  "name": "shortlist-digital/agreable-social-article-plugin",
+  "description": "Generate an article for Croissant powered sites based on a social media trend",
   "license": "MIT",
   "require": {
-    "getherbert/framework": "~0.9"
+    "getherbert/framework": "~0.9",
+    "jarednova/mesh": "^0.4.0"
   },
   "config": {
     "preferred-install": "dist"
