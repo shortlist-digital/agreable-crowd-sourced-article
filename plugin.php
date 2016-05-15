@@ -2,7 +2,7 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       Crowd Sourced Article Generator
+ * Plugin Name:       Agreable Social Article Plugin
  * Plugin URI:        http://slm.digital
  * Description:       Generate an article for croissant sites based on crowd sourced data
  * Version:           1.0.0
