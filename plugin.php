@@ -2,12 +2,12 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       MyPlugin
- * Plugin URI:        http://plugin-name.com/
- * Description:       A plugin.
+ * Plugin Name:       Crowd Sourced Article Generator
+ * Plugin URI:        http://slm.digital
+ * Description:       Generate an article for croissant sites based on crowd sourced data
  * Version:           1.0.0
- * Author:            Author
- * Author URI:        http://author.com/
+ * Author:            Jon Sherrard
+ * Author URI:        http://twitter.com/jshez
  * License:           MIT
  */
 
