@@ -14,9 +14,13 @@ class Post {
 
         function bootstrap()
         {
-            $title = "Generated article from /r/$this->subreddit";
+            $title = "Generated article from /r/$this->subreddit | ".time();
             $post = new Mesh\Post($title, 'post');
-            return new TimberPost($post);
+            $post->set('header_type', 'standard-hero');
+            $post->set('header_display_hero_image', true);
+            $post->set('header_display_headline', true);
+            $post->set('header_display_sell', true);
+            return new TimberPost($post->id);
         }
 
 }
