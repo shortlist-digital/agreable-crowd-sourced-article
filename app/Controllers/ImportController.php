@@ -32,8 +32,15 @@ class ImportController {
         return Collection::make($items_array)->map(function($item) {
             return $item->data;
         })->filter(function($item) {
-            return property_exists($item, 'preview');
-        });
+            return property_exists($item, 'preview') || $this->image_test($item);
+        })->values();
+    }
+
+    function image_test($item) {
+        $extensions = array("gif", "jpg", "jpeg", "png", "tiff", "tif");
+        $url = $item->url;
+        $url_extension = pathinfo($url, PATHINFO_EXTENSION);
+        return in_array($url_extension, $extensions);
     }
 
 
