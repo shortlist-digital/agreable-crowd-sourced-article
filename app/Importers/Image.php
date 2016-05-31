@@ -26,9 +26,13 @@ class Image extends Block {
 		$this->set_property('width', 'widget_image_width', 'large');
 		$this->set_property('position', 'widget_image_position', 'center');
 		$this->set_property('crop', 'widget_image_crop', 'original');
-        $this->set_property('caption', 'widget_image_caption', $this->caption());
+        $this->set_property('credit', 'widget_image_credit', $this->credit());
         $this->widget_names[] = 'image';
-        return $this->widget_names;
+        return [
+            'widget_names' => $this->widget_names,
+            'image' => wp_get_attachment_image_src($image->id, 'full'),
+            'image_id' => $image->id
+        ];
     }
 
     public function set_title()
@@ -48,9 +52,9 @@ class Image extends Block {
             return $this->data->url;
         }
     }
-	public function caption()
+	public function credit()
 	{
-		return "Credit: <a target=\"_blank\" href=\"".$this->build_url()."\">".$this->data->author."</a>";
+		return "Source: <a target=\"_blank\" href=\"".$this->build_url()."\">".$this->data->author."</a>";
 
 	}
 

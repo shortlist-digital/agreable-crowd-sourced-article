@@ -19,7 +19,7 @@ class ImportController {
         $this->post = $post_importer->bootstrap();
         $this->items = $this->filter($content_object->data->children);
         BodyImporter::run($this->post, $this->items);
-        header('location: '.get_edit_post_link($this->post->id));
+        header('location: '.$this->post->guid);
     }
 
     function build_url($subreddit, $time = "all", $limit = 20)
